@@ -59,12 +59,9 @@ export const getProfessionsByIds = (professionsIds) => (state) => {
     if (state.professions.entities) {
         for (const profession of state.professions.entities) {
             if (profession._id === professionsIds) {
-               return profession;
-                // break;
+                return profession;
             }
         }
-
-        // return professionsArray;
     }
     return {};
 };
