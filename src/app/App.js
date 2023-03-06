@@ -16,20 +16,20 @@ function App() {
         <div>
             <AppLoader>
                 <AuthProvider>
-                    <NavBar />
+                <NavBar />
 
-                    <ProfessionProvider>
-                        <Switch>
-                            <ProtectedRoute
-                                path="/users/:userId?/:edit?"
-                                component={Users}
-                            />
-                            <Route path="/login/:type?" component={Login} />
-                            <Route path="/logout" component={LogOut} />
-                            <Route path="/" exact component={Main} />
-                            <Redirect to="/" />
-                        </Switch>
-                    </ProfessionProvider>
+                <ProfessionProvider>
+                    <Switch>
+                        <ProtectedRoute
+                            path="/users/:userId?/:edit?"
+                            component={Users}
+                        />
+                        <Route path="/login/:type?" component={Login} />
+                        <Route path="/logout" component={LogOut} />
+                        <Route path="/" exact component={Main} />
+                        <Redirect to="/" />
+                    </Switch>
+                </ProfessionProvider>
                 </AuthProvider>
             </AppLoader>
             <ToastContainer />
